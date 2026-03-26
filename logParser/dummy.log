@@ -1,0 +1,14 @@
+INFO  | 2026-03-26 10:00:01 | Server started successfully
+WARN  | 2026-03-26 10:05:12 | Memory usage at 85%
+ERROR | 2026-03-26 10:12:44 | Database connection lost
+INFO  | 2026-03-26 10:13:00 | Retry connection
+ERROR | 2026-03-26 10:13:05 | Database connection lost
+INFO  | 2026-03-26 10:15:22 | User login: admin
+FATAL | 2026-03-26 10:20:00 | System crash
+INFO  | 2026-03-26 10:00:01 | Server started successfully
+WARN  | 2026-03-26 10:05:12 | Memory usage at 83%
+ERROR | 2026-03-26 10:12:44 | Database connection lost
+INFO  | 2026-03-26 10:13:00 | Retry connection
+ERROR | 2026-03-26 10:13:05 | Database connection lost
+INFO  | 2026-03-26 10:15:22 | User login: admin
+FATAL | 2026-03-26 10:20:00 | System crash
