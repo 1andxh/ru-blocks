@@ -9,6 +9,7 @@ class LogParser
   end
 
   def parse 
+      begin
         puts "Parsing log file: #{filepath} ..."
 
         File.foreach(@filepath) do |line| # stream file line by line
@@ -19,6 +20,13 @@ class LogParser
             @counts[log_level] += 1
         end
         puts "Parsing complete"
+
+      rescue Errno::ENOENT
+            puts "Error: FIle '#{filepath} was not found."
+            return
+      rescue => e
+            puts "An unexpected error occurred: #{e.message}"
+      end
   end
 
   def log_counts
@@ -38,6 +46,6 @@ class LogParser
 
 end
 
-parser = LogParser.new("dummy.log")
+parser = LogParser.new("dummu.log")
 parser.parse 
 parser.print_logs
