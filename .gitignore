@@ -1,0 +1,26 @@
+# Generated files, docs, and build artifacts
+*.gem
+*.rbc
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+/pkg/
+
+# Temp files, logs, and coverage reports
+/tmp/
+/coverage/
+/log/*.log
+/test/tmp/
+/test/version_tmp/
+
+# Bundler and environment config
+.bundle
+/vendor/bundle
+.env
+.rvmrc
+.byebug_history
+
+
+# docs
+README.md
