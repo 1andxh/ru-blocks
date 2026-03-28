@@ -13,9 +13,14 @@ class MarkdownConverter
 
     end
 
+    private
 
     def convert_headers(text)
         text.gsub(/^# (.*)$/, '<h1>\1<h1>')   
+    end
+
+    def conver_bold(text)
+              
     end
 end
 
