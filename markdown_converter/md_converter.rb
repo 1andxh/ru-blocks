@@ -4,23 +4,24 @@ class MarkdownConverter
     end
 
     def convert(text)
-        if text.start_with?("# ")
-            content = text.sub("# ", "").strip
-            "<h1>#{content}</h1>"
-        else
-            "<p>#{text.strip}</p>"
+        line = text.strip
+        if line.start_with?("# ")
+            return convert_header(line)
         end
 
+        processed_text = conver_bold(line)
+        "<p>#{processed_text}</p>"
     end
 
     private
 
-    def convert_headers(text)
-        text.gsub(/^# (.*)$/, '<h1>\1<h1>')   
+    def convert_header(text)
+        header = text.sub("#", "").strip
+        "<h1>#{header}</h1>"   
     end
 
     def conver_bold(text)
-              
+        text.gsub(/\*\*(.*?)\*\*/, '<strong>\1</strong>')    
     end
 end
 
